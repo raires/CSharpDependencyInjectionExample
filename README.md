@@ -1,3 +1,1 @@
-# CSharpDependencyInjectionExample
-
-Simple C# .NET 6.0 Dependency Injection
+# Simple C# .NET 6.0 Dependency Injection
