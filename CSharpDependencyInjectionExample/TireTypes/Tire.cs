@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CSharpDependencyInjectionExample.TireTypes.Types;
 
 namespace CSharpDependencyInjectionExample
 {
@@ -10,9 +11,9 @@ namespace CSharpDependencyInjectionExample
     {
         private ITireType _tireType;
 
-        public TireService(ITireType TireType)
+        public TireService(ITireType? TireType = null)
         {
-            _tireType = TireType;
+            _tireType = TireType ?? new NoTire("");
         }
 
         public void ShowTire()

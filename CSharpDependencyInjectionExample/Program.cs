@@ -1,5 +1,5 @@
-﻿
-using CSharpDependencyInjectionExample;
+﻿using CSharpDependencyInjectionExample;
+using CSharpDependencyInjectionExample.TireTypes.Types;
 
 Console.WriteLine("Hello, World!");
 

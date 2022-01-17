@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using CSharpDependencyInjectionExample;
+using CSharpDependencyInjectionExample.TireTypes.Types;
 
 namespace CSharpDependencyInjection.Tests.UnitTests
 {
@@ -14,6 +15,13 @@ namespace CSharpDependencyInjection.Tests.UnitTests
         [Test]
         public void TestTireService()
         {
+            var noTireService = new TireService();
+
+            var result0 = noTireService.ReturnTire();
+
+            Assert.That(result0, Is.Not.Null);
+            Assert.That(result0, Does.Not.Contain("Dirt").IgnoreCase.And.Not.Contain("Street").IgnoreCase);
+
 
             ITireType DirtBoy = new DirtTire("Dirt Boy");
             var tireService = new TireService(DirtBoy);
